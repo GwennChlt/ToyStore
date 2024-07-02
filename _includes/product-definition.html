@@ -11,3 +11,18 @@
     Add to cart
   </button>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.add-to-cart').addEventListener('click', function() {
+      var button = this;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'add_to_cart',
+        'product_id': button.getAttribute('data-id'),
+        'product_name': button.getAttribute('data-name'),
+        'product_price': button.getAttribute('data-price'),
+      });
+    });
+  });
+</script>
