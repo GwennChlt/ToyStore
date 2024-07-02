@@ -19,9 +19,9 @@
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         'event': 'add_to_cart',
-        'product_id': button.getAttribute('data-id'),
-        'product_name': button.getAttribute('data-name'),
-        'product_price': button.getAttribute('data-price'),
+        'product_id': '{{ page.identifier }}',
+        'product_name': '{{ page.name }}',
+        'product_price': {{ page.price }},
       });
     });
   });
