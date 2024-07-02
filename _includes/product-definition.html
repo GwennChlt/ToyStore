@@ -12,17 +12,3 @@
   </button>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.add-to-cart').addEventListener('click', function() {
-      var button = this;
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        'event': 'add_to_cart',
-        'product_id': '{{ page.identifier }}',
-        'product_name': '{{ page.name }}',
-        'product_price': {{ page.price }},
-      });
-    });
-  });
-</script>
